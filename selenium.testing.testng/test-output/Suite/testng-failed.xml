@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="SeleniumTest(failed)">
+    <parameter name="browser" value="ch"/>
+    <classes>
+      <class name="com.selenium.selenium.testing.testng.AmazonTest">
+        <methods>
+          <include name="amazonSearch"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.selenium.selenium.testing.testng.AmazonTest -->
+      <class name="com.selenium.selenium.testing.testng.EeGPTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="searching"/>
+        </methods>
+      </class> <!-- com.selenium.selenium.testing.testng.EeGPTest -->
+    </classes>
+  </test> <!-- SeleniumTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

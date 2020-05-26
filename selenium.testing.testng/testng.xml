@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ChromeSuite"  thread-count="1" >
+
+<test  name="SeleniumTest" >
+  
+<!--   <parameter name="browser" value="Chrome"></parameter> -->
+    <classes>
+     <!--  <class name="com.selenium.selenium.testing.testng.EeGPBasicTest"/> -->
+      
+      <class name="com.selenium.selenium.testing.testng.EeGPloginTest"/>
+      <!-- <class name="com.selenium.selenium.testing.testng.AmazonTest"/> -->
+    </classes>
+  </test> <!-- SeleniumTest -->
+</suite> <!-- Suite -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [ChromeSuite]">
+  <test thread-count="1" name="SeleniumTest(failed)">
+    <classes>
+      <class name="com.selenium.selenium.testing.testng.EeGPloginTest">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="tareing"/>
+          <include name="indentRaiseTest"/>
+        </methods>
+      </class> <!-- com.selenium.selenium.testing.testng.EeGPloginTest -->
+    </classes>
+  </test> <!-- SeleniumTest(failed) -->
+</suite> <!-- Failed suite [ChromeSuite] -->
