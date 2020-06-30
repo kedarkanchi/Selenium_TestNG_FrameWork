@@ -26,7 +26,7 @@ import org.openqa.selenium.io.FileHandler;
 
 public class LaunchNew {
 
-	 static Logger log= Logger.getLogger(LaunchNew.class.getName());
+	// static Logger log= Logger.getLogger(LaunchNew.class.getName());
 	 
 	 
 	 static String path="./seleniumData.properties";
@@ -81,8 +81,8 @@ public class LaunchNew {
 			driver.manage().window().maximize();
 			
 			
-			String path="./log4j.properties";
-			PropertyConfigurator.configure(path);
+			/*String path="./log4j.properties";
+			PropertyConfigurator.configure(path);*/
 		 
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
@@ -178,14 +178,14 @@ public class LaunchNew {
 			
 		}
 
-	private static void reportFailure(String msg) throws IOException {
+	/*private static void reportFailure(String msg) throws IOException {
 		
 		
 		// TODO Auto-generated method stub
 		takeScreenshoot();
 		
 		log.info(msg);
-	}
+	}*/
 
 	private static void takeScreenshoot() throws IOException {
 		// TODO Auto-generated method stub

@@ -17,10 +17,17 @@ class CheckBox extends LaunchNew {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.spicejet.com/");
 
+		System.out.println("sfalt title"+driver.getTitle());
+		
+		System.out.println("anthertitle"+driver.findElement(By.tagName("title")).getText());
+		
 		driver.findElement(By.cssSelector("input[id='ctl00_mainContent_chk_friendsandfamily']")).click();
 
 		Thread.sleep(5000);
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.manage().wait(10);
 		
 		WebDriverWait expWait=new WebDriverWait(driver,20);
 		
@@ -28,7 +35,7 @@ class CheckBox extends LaunchNew {
 		
 		driver.findElement(By.cssSelector("input[id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).click();
 		
-		
+		driver.close();
 
 	}
 

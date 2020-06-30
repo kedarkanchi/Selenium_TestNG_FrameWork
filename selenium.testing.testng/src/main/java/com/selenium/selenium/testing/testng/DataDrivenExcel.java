@@ -36,7 +36,7 @@ public class DataDrivenExcel {
 		}
 	}
 	
-public static void getRowCount() throws IOException {
+public static void getRowCount() {
 	
 	
 	try {

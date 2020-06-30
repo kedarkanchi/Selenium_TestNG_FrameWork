@@ -5,6 +5,10 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.asserts.Assertion;
 
 public class MultipleWindowsHandle extends LaunchNew {
 
@@ -18,21 +22,42 @@ public class MultipleWindowsHandle extends LaunchNew {
 		
 		driver.findElement(By.xpath("//a[contains(text(),'Help')]")).click();
 		
+		Actions act=new Actions(driver);
+		
+		
+		
+		
+		String win =driver.getWindowHandle();
+		
 		Set<String> windows = driver.getWindowHandles();
+		
+		
+		//Assert.assertEquals(windows, win);
+		
 		
 		Iterator<String> it = windows.iterator();
 		
-		String parentit=it.next();
+		String parentit= win;
 		
 		String childit=it.next();
 		
-		driver.switchTo().window(childit);
+		String childit2=it.next();
 		
-		driver.findElement(By.xpath("//span[contains(text(),'Google Account')]")).click();
-		Thread.sleep(5000);
-		driver.switchTo().window(childit);
+		
+		
+		
+		//driver.switchTo().window(childit);
+		
+		//driver.findElement(By.xpath("//span[contains(text(),'Google Account')]")).click();
+		
 		Thread.sleep(5000);
 		driver.switchTo().window(parentit);
+		
+		//act.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Privacy')]"))).contextClick().keyDown(Keys.ARROW_DOWN).build().perform();
+		
+		//Thread.sleep(10000);
+		
+	    //driver.switchTo().window(childit);
 		
 		
 	}

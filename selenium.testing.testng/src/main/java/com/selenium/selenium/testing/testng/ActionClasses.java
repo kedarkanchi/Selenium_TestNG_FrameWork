@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-import ch.qos.logback.core.joran.action.Action;
-
 public class ActionClasses extends LaunchNew{
 
 	public static void main(String[] args) throws IOException {
@@ -26,7 +24,9 @@ public class ActionClasses extends LaunchNew{
 		
 		act.moveToElement(driver.findElement(By.id("nav-link-accountList"))).contextClick().build().perform();
 		
-
+        driver.findElement(By.cssSelector("")).sendKeys(Keys.BACK_SPACE);
+        
+        
 	}
 
 }

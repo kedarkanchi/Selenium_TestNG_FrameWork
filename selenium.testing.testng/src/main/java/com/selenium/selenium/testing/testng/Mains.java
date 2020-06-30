@@ -1,10 +1,12 @@
 package com.selenium.selenium.testing.testng;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -28,12 +30,22 @@ public class Mains extends LaunchNew{
 		
 		sel.selectByIndex(8);
 		
+		List<WebElement> dropOption = sel.getOptions();
+		
+		for(int i=0; i<dropOption.size(); i++) {
+			
+			
+			System.out.println(dropOption.get(i).getText());
+			
+			
+		}
+		/*
 		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("One Plus 7T Pro");
 		
 		driver.findElement(By.xpath("//input[@type='submit'][@class='nav-input']")).click();
+		*/
 		
-		
-		driver.get("https://www.spicejet.com/");
+		/*driver.get("https://www.spicejet.com/");
 		
 		driver.findElement(By.cssSelector("#ctl00_mainContent_ddl_originStation1_CTXT")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Bengaluru (BLR)')]")).click();
@@ -43,8 +55,8 @@ public class Mains extends LaunchNew{
 		driver.findElement(By.cssSelector("#ctl00_mainContent_ddl_destinationStation1_CTXT")).click();
 		driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();;
 		
-    	/*type("eegpIndentSearch_name","valueKey" );*/
-    	/*
+    	type("eegpIndentSearch_name","valueKey" );
+    	
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	//Thread.sleep(4000);
       
