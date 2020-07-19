@@ -29,7 +29,7 @@ public class CalendarMain extends LaunchNew {
 		
 		
 		
-		while(!driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[2]")).getText().contains("January 2021")) {
+		while(!driver.findElement(By.xpath("//th[contains(text(),'July 2020')]")).getText().contains("July 2021")) {
 			//System.out.println("hello");
 			driver.findElement(By.xpath("//div[@class='datepicker-days']//th[@class='next'][contains(text(),'»')]")).click();
 			
@@ -43,7 +43,7 @@ public class CalendarMain extends LaunchNew {
 			
 		}*/
 	
-		
+		 
 	List<WebElement> date = driver.findElements(By.className("day"));
 		
 		int count=driver.findElements(By.className("day")).size();
