@@ -33,7 +33,9 @@ public class TesingSelenium {
 				
 				WebElement search = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 				
-				search.sendKeys(Keys.CONTROL+"a");
+				search.sendKeys(Keys.CONTROL+"a"+Keys.BACK_SPACE);
+				
+				//search.sendKeys("");
 				
 				Thread.sleep(5000);
 				
